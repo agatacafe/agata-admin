@@ -11,14 +11,17 @@ P = lambda pts: "M"+"L".join(f"{x:.1f} {y:.1f}" for x, y in pts)+"Z"
 u = lambda y: (y-TOP)/(BOT-TOP)
 
 def crease(y):
-    # Right of centre at the top, long sweep to the left, hooks back under the right lobe.
-    pts = [(0.0, 26), (0.12, 22), (0.40, 2), (0.70, -26), (0.88, -24), (1.0, -4)]
+    # Based on the illustration: one smooth arc (a C, not an S) bowing to the left,
+    # starting right of centre at the top and hooking back into the edge at the base.
+    pts = [(-0.1, 40), (0.0, 32), (0.13, 18), (0.3, 4), (0.5, -8), (0.68, -14), (0.82, -13),
+           (0.92, -4), (1.0, 14), (1.1, 36)]
     t = min(max(u(y), 0), 1)
-    for (t0, a), (t1, b) in zip(pts, pts[1:]):
-        if t <= t1:
-            s = (t-t0)/(t1-t0); s = s*s*(3-2*s)
-            return CX+a+(b-a)*s
-    return CX+pts[-1][1]
+    for i in range(1, len(pts)-2):
+        (t0, p0), (t1, p1), (t2, p2), (t3, p3) = pts[i-1:i+3]
+        if t <= t2:
+            s = (t-t1)/(t2-t1)  # Catmull-Rom: smooth, with no flat spots at the points
+            return CX+0.5*(2*p1+(p2-p0)*s+(2*p0-5*p1+4*p2-p3)*s*s+(3*p1-p0-3*p2+p3)*s**3)
+    return CX+pts[-2][1]
 
 def edge(y, side): return CX+side*RX*math.sqrt(max(0.0, 1-((y-CY)/RY)**2))
 def ripple(y, seed, amp=1.0):
@@ -59,8 +62,8 @@ def crease_band(extra=0.0):
     random.seed(11)
     n = 140; L, R = [], []
     for i in range(n+1):
-        y = TOP+8+(BOT-TOP-16)*i/n
-        w = 3+15*math.sin(math.pi*i/n)**0.6+extra
+        y = TOP-2+(BOT-TOP+4)*i/n
+        w = 5+14*math.sin(math.pi*i/n)**0.6+extra
         x = crease(y)
         L.append((x-w*0.55-random.uniform(0, 2), y)); R.append((x+w*0.45+random.uniform(0, 1.4), y))
     return P(L+R[::-1])
