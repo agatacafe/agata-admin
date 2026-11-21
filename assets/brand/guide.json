@@ -1,0 +1,29 @@
+{
+  "version": "2026-11-21",
+  "logo": {
+    "description": "A faceted coffee bean, cut like an agate stone and split by a zig-zag crease. One flat color, no outlines or gradients, in the same spirit as the Elaenia bird.",
+    "rules": [
+      "Use olive on light backgrounds and cream on olive or dark backgrounds.",
+      "Keep the original proportions and the transparent background; do not add a backing shape.",
+      "Leave clear space around the bean of at least one quarter of its width.",
+      "The illustrated agate bean and the script wordmark remain the packaging artwork; the flat bean is for interfaces, favicons and small sizes."
+    ]
+  },
+  "colors": [
+    {"name": "Olive", "hex": "#7A7F5E", "use": "Wordmark background and primary brand surface."},
+    {"name": "Deep olive", "hex": "#6B7050", "use": "Logo and accents on light backgrounds; interface primary color."},
+    {"name": "Sage", "hex": "#CDD3AC", "use": "Product label background."},
+    {"name": "Cream", "hex": "#FAF4EA", "use": "Script wordmark and logo on olive."},
+    {"name": "Roast", "hex": "#8B4A1C", "use": "Illustrated bean, sparing highlights."},
+    {"name": "Honey", "hex": "#C98A3A", "use": "Illustrated bean, sparing highlights."}
+  ],
+  "label_fields": [
+    ["Origen", "Origin, e.g. Carrizal, Costa Rica"],
+    ["Variedad", "Coffee variety"],
+    ["Notas", "Tasting notes"],
+    ["Proceso", "Process, e.g. Natural"],
+    ["Tueste", "Roast level"],
+    ["Empaque", "Package, e.g. 500g en grano"]
+  ],
+  "contact": ["agatacafecr@gmail.com", "@AGATACAFECR"]
+}

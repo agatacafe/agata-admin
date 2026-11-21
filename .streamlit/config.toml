@@ -1,0 +1,23 @@
+[browser]
+gatherUsageStats = false
+
+# Ágata café web style v1: olive, sage and cream from the product label.
+[theme]
+base = "light"
+font = "sans-serif"
+headingFont = "serif"
+primaryColor = "#6B7050"
+backgroundColor = "#FBF7EE"
+secondaryBackgroundColor = "#E9ECD9"
+textColor = "#3E4230"
+borderColor = "#CDD3AC"
+baseRadius = "0.5rem"
+buttonRadius = "0.5rem"
+showWidgetBorder = true
+
+[theme.dark]
+primaryColor = "#CDD3AC"
+backgroundColor = "#24261C"
+secondaryBackgroundColor = "#33362A"
+textColor = "#FAF4EA"
+borderColor = "#565B44"
