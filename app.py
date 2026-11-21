@@ -9,10 +9,10 @@ from scripts.ui import LOGO, app_header, service_card, styles
 
 SERVICES = (
     Service("sales", "Sales",
-            "Record coffee orders, customers and invoices.",
+            "Record coffee orders, customers and payments.",
             "SALES_APP_URL"),
     Service("inventory", "Inventory",
-            "Track green and roasted coffee lots, packaging and stock movements.",
+            "Track green and roasted coffee, roasts, packaging and stock movements.",
             "INVENTORY_APP_URL"),
     Service("reconciliation", "Reconciliation",
             "Review bank transactions and prepare monthly account reconciliations.",

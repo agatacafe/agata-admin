@@ -11,14 +11,14 @@ links in Ágata café's other apps.
 
 ## Applications
 
-| Card | Setting |
-| --- | --- |
-| Sales | `SALES_APP_URL` |
-| Inventory | `INVENTORY_APP_URL` |
-| Reconciliation | `RECONCILIATION_APP_URL` |
-| Equity and contributions | `EQUITY_APP_URL` |
+| Card | Repository | Setting |
+| --- | --- | --- |
+| Sales | `agatacafe/agata-sales` | `SALES_APP_URL` |
+| Inventory | `agatacafe/agata-inventory` | `INVENTORY_APP_URL` |
+| Reconciliation | `agatacafe/agata-reconciliation` | `RECONCILIATION_APP_URL` |
+| Equity and contributions | `agatacafe/agata-equity` | `EQUITY_APP_URL` |
 
-None of these apps is deployed yet, so every card starts disabled with
+The apps are not deployed yet, so every card starts disabled with
 "App link will be available after deployment." Set a URL in
 `.streamlit/secrets.toml` (copy `secrets.example.toml`) or as an environment
 variable to enable a card. Environment values take precedence. Invalid,
