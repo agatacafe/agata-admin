@@ -29,10 +29,9 @@ def strip(fa, fb, seed, n=140, y0=TOP-4, y1=BOT+4):
     ys = [y0+(y1-y0)*i/n for i in range(n+1)]
     return P([(fa(y)+ripple(y, seed), y) for y in ys]+[(fb(y)+ripple(y, seed+0.7), y) for y in ys[::-1]])
 
-LEFT_BANDS = [(INK,.05),(ROAST,.05),(AMBER,.07),(SAND,.025),(HONEY,.08),(CREAM,.02),(AMBER,.06),(ROAST,.045),
-              (HONEY,.07),(SAND,.03),(AMBER,.08),(ROAST,.035),(HONEY,.07),(CREAM,.02),(AMBER,.06),(ROAST,.05),(HONEY,.07),(AMBER,.2)]
-RIGHT_BANDS = [(AMBER,.04),(SAND,.05),(HONEY,.07),(ROAST,.05),(CREAM,.025),(AMBER,.07),(HONEY,.06),(ROAST,.06),(SAND,.03),
-               (AMBER,.08),(HONEY,.06),(ROAST,.045),(CREAM,.02),(HONEY,.07),(AMBER,.06),(ROAST,.07),(HONEY,.2)]
+# A few broad layers per half: about three visible stripes each (cream, roast, sand).
+LEFT_BANDS = [(INK,.06),(ROAST,.07),(HONEY,.17),(CREAM,.04),(AMBER,.16),(ROAST,.07),(HONEY,.18),(SAND,.05),(AMBER,.3)]
+RIGHT_BANDS = [(AMBER,.06),(HONEY,.16),(CREAM,.045),(AMBER,.15),(ROAST,.07),(HONEY,.18),(SAND,.05),(AMBER,.3)]
 
 def contour_strip(side, f0, f1, seed, n=160):
     ys = [TOP-2+(BOT-TOP+4)*i/n for i in range(n+1)]
@@ -110,7 +109,7 @@ def color_svg():
 def mono_svg(color):
     """Same drawing in one colour: light bands, crease and gloss become cut-outs."""
     left, right = layers()
-    light = {CREAM}
+    light = {CREAM, SAND}
     cut = "".join(f'<path d="{d}"/>' for c, d in left if c in light)
     cutr = "".join(f'<path d="{d}"/>' for c, d in right if c in light)
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="22 43 256 314" role="img" aria-labelledby="title">

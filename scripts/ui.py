@@ -16,7 +16,7 @@ def styles():
     .st-key-agata_header {
         padding-top:1.25rem;margin-bottom:1.25rem;padding-bottom:1.25rem;border-bottom:1px solid rgba(122,127,94,.35);
     }
-    .st-key-agata_header .agata-logo {display:block;margin-left:auto;width:104px;height:auto;}
+    .st-key-agata_header .agata-logo {display:block;margin-left:auto;width:80px;height:auto;}
     [class*="st-key-service_"]:not([class*="st-key-service_row_"]) {
         border-top:3px solid #7A7F5E;background:rgba(122,127,94,.07);
         border-radius:.65rem;justify-content:space-between;
@@ -28,7 +28,7 @@ def styles():
         [class*="st-key-service_row_"] [data-testid="stHorizontalBlock"] {flex-direction:column;}
         .st-key-agata_header [data-testid="stColumn"],
         [class*="st-key-service_row_"] [data-testid="stColumn"] {width:100%;flex:0 0 auto;min-width:0;}
-        .st-key-agata_header .agata-logo {width:80px;margin-left:0;}
+        .st-key-agata_header .agata-logo {width:60px;margin-left:0;}
     }
     </style>""")
 

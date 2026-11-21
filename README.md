@@ -31,7 +31,7 @@ is confirmed, it can also be added to `DEFAULT_URLS` in `app.py`.
 packaging bean: an S-shaped crease, rippled agate layers that follow each half,
 thin cream veins and a glossy highlight, in roast, amber, honey, sand and cream.
 It carries its own colours, so the header shows it unchanged in light and dark
-themes (104 px on desktop, 80 px on phones). `agata-bean-olive.svg` and
+themes (80 px on desktop, 60 px on phones). `agata-bean-olive.svg` and
 `agata-bean-cream.svg` are one-colour versions for single-ink uses.
 
 The SVGs are generated; change `scripts/make_logo.py` and run
