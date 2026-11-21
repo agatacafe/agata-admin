@@ -1,29 +1,91 @@
 {
   "version": "2026-11-21",
   "logo": {
-    "description": "A faceted coffee bean, cut like an agate stone and split by a zig-zag crease. One flat color, no outlines or gradients, in the same spirit as the Elaenia bird.",
+    "description": "A flat vector agate bean drawn from the illustrated packaging bean: an S-shaped crease, rippled agate layers that follow each half of the bean, thin cream veins and a glossy highlight, in roast, amber, honey, sand and cream.",
     "rules": [
-      "Use olive on light backgrounds and cream on olive or dark backgrounds.",
-      "Keep the original proportions and the transparent background; do not add a backing shape.",
+      "Use the full-colour bean by default, on olive, sage, cream or dark backgrounds.",
+      "Use the one-colour olive or cream bean where only one ink is possible, such as stamps, engraving or embroidery.",
+      "Keep the original proportions and the transparent background; do not add a backing shape or recolour the layers.",
       "Leave clear space around the bean of at least one quarter of its width.",
-      "The illustrated agate bean and the script wordmark remain the packaging artwork; the flat bean is for interfaces, favicons and small sizes."
+      "The painted illustration and the script wordmark remain the packaging artwork; the flat bean is for interfaces, favicons and small sizes.",
+      "Regenerate the SVGs with scripts/make_logo.py instead of editing them by hand."
     ]
   },
   "colors": [
-    {"name": "Olive", "hex": "#7A7F5E", "use": "Wordmark background and primary brand surface."},
-    {"name": "Deep olive", "hex": "#6B7050", "use": "Logo and accents on light backgrounds; interface primary color."},
-    {"name": "Sage", "hex": "#CDD3AC", "use": "Product label background."},
-    {"name": "Cream", "hex": "#FAF4EA", "use": "Script wordmark and logo on olive."},
-    {"name": "Roast", "hex": "#8B4A1C", "use": "Illustrated bean, sparing highlights."},
-    {"name": "Honey", "hex": "#C98A3A", "use": "Illustrated bean, sparing highlights."}
+    {
+      "name": "Olive",
+      "hex": "#7A7F5E",
+      "use": "Wordmark background and primary brand surface."
+    },
+    {
+      "name": "Deep olive",
+      "hex": "#6B7050",
+      "use": "Logo and accents on light backgrounds; interface primary color."
+    },
+    {
+      "name": "Sage",
+      "hex": "#CDD3AC",
+      "use": "Product label background."
+    },
+    {
+      "name": "Cream",
+      "hex": "#FAF4EA",
+      "use": "Script wordmark and logo on olive."
+    },
+    {
+      "name": "Roast",
+      "hex": "#7A3E17",
+      "use": "Dark agate layers and the logo outline."
+    },
+    {
+      "name": "Amber",
+      "hex": "#A9601F",
+      "use": "Mid agate layers in the logo."
+    },
+    {
+      "name": "Honey",
+      "hex": "#CF923F",
+      "use": "Main agate tone of the logo."
+    },
+    {
+      "name": "Ink",
+      "hex": "#3A1C0A",
+      "use": "Logo crease."
+    },
+    {
+      "name": "Sand",
+      "hex": "#E8C98F",
+      "use": "Light agate layers in the logo."
+    }
   ],
   "label_fields": [
-    ["Origen", "Origin, e.g. Carrizal, Costa Rica"],
-    ["Variedad", "Coffee variety"],
-    ["Notas", "Tasting notes"],
-    ["Proceso", "Process, e.g. Natural"],
-    ["Tueste", "Roast level"],
-    ["Empaque", "Package, e.g. 500g en grano"]
+    [
+      "Origen",
+      "Origin, e.g. Carrizal, Costa Rica"
+    ],
+    [
+      "Variedad",
+      "Coffee variety"
+    ],
+    [
+      "Notas",
+      "Tasting notes"
+    ],
+    [
+      "Proceso",
+      "Process, e.g. Natural"
+    ],
+    [
+      "Tueste",
+      "Roast level"
+    ],
+    [
+      "Empaque",
+      "Package, e.g. 500g en grano"
+    ]
   ],
-  "contact": ["agatacafecr@gmail.com", "@AGATACAFECR"]
+  "contact": [
+    "agatacafecr@gmail.com",
+    "@AGATACAFECR"
+  ]
 }

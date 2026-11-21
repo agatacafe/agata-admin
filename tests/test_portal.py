@@ -42,7 +42,7 @@ class PortalTests(unittest.TestCase):
     def test_brand_kit_contains_logos(self):
         import io, zipfile
         names = zipfile.ZipFile(io.BytesIO(brand_kit())).namelist()
-        for name in ("agata-bean.svg", "agata-bean-cream.svg", "guide.json", "reference/wordmark.png"):
+        for name in ("agata-bean.svg", "agata-bean-olive.svg", "agata-bean-cream.svg", "guide.json", "reference/wordmark.png"):
             self.assertIn(name, names)
 
 

@@ -27,12 +27,17 @@ is confirmed, it can also be added to `DEFAULT_URLS` in `app.py`.
 
 ## Logo
 
-`assets/brand/agata-bean.svg` (olive) and `agata-bean-cream.svg` are a flat,
-faceted coffee bean, cut like an agate and split by a zig-zag crease, in the
-same minimal single-shape style as the Elaenia bird. The header uses the bean as
-a CSS mask, so it renders olive in the light theme and cream in the dark theme,
-at 96 px on desktop and 80 px on phones. The illustrated agate bean and the
-script wordmark stay as packaging artwork in `assets/brand/reference/`.
+`assets/brand/agata-bean.svg` is a flat vector version of the illustrated
+packaging bean: an S-shaped crease, rippled agate layers that follow each half,
+thin cream veins and a glossy highlight, in roast, amber, honey, sand and cream.
+It carries its own colours, so the header shows it unchanged in light and dark
+themes (104 px on desktop, 80 px on phones). `agata-bean-olive.svg` and
+`agata-bean-cream.svg` are one-colour versions for single-ink uses.
+
+The SVGs are generated; change `scripts/make_logo.py` and run
+`python scripts/make_logo.py assets/brand` rather than editing them by hand.
+The painted bean and the script wordmark stay as packaging artwork in
+`assets/brand/reference/`.
 
 ## Run locally
 

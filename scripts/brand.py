@@ -33,9 +33,9 @@ def brand_guide():
 
     st.subheader("Logo")
     st.write(guide["logo"]["description"])
-    for column, filename, background, label in zip(st.columns(2),
-            ("agata-bean.svg", "agata-bean-cream.svg"), ("#FBF7EE", "#7A7F5E"),
-            ("Olive bean · light background", "Cream bean · olive background")):
+    for column, filename, background, label in zip(st.columns(3),
+            ("agata-bean.svg", "agata-bean-olive.svg", "agata-bean-cream.svg"), ("#7A7F5E", "#FBF7EE", "#7A7F5E"),
+            ("Agate bean · full colour", "One colour · olive", "One colour · cream")):
         with column:
             svg = (BRAND / filename).read_text(encoding="utf-8")
             encoded = base64.b64encode(svg.encode()).decode()
