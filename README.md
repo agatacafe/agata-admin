@@ -18,12 +18,12 @@ links in Ágata café's other apps.
 | Reconciliation | `agatacafe/agata-reconciliation` | `RECONCILIATION_APP_URL` |
 | Equity and contributions | `agatacafe/agata-equity` | `EQUITY_APP_URL` |
 
-The apps are not deployed yet, so every card starts disabled with
-"App link will be available after deployment." Set a URL in
-`.streamlit/secrets.toml` (copy `secrets.example.toml`) or as an environment
-variable to enable a card. Environment values take precedence. Invalid,
-credential-bearing or non-HTTP(S) URLs keep only that card disabled. Once a URL
-is confirmed, it can also be added to `DEFAULT_URLS` in `app.py`.
+Sales is deployed at https://agatacafe-sales.streamlit.app/ (user-confirmed
+2026-11-21) and is linked by default. The other cards stay disabled with
+"App link will be available after deployment." until their URLs are confirmed
+and added to `DEFAULT_URLS` in `app.py`. A setting in `.streamlit/secrets.toml`
+or an environment variable overrides a default; a blank value uses it. Invalid,
+credential-bearing or non-HTTP(S) URLs keep only that card disabled.
 
 ## Logo
 

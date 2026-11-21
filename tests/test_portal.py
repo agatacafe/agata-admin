@@ -7,7 +7,7 @@ from unittest.mock import patch
 
 from streamlit.testing.v1 import AppTest
 
-from app import SERVICES
+from app import DEFAULT_URLS, SERVICES
 from scripts.brand import brand_kit
 from scripts.portal_config import valid_app_url
 
@@ -25,8 +25,16 @@ class PortalTests(unittest.TestCase):
         self.assertFalse(app.exception)
         self.assertEqual(app.title[0].value, "Ágata café: administration")
         self.assertEqual([s.value for s in app.subheader[:4]], [s.title for s in SERVICES])
+        # Only the confirmed Sales deployment is linked; the others wait for their URLs.
+        self.assertEqual([(l.proto.label, l.proto.url) for l in app.get("link_button")],
+                         [("Open Sales", DEFAULT_URLS["SALES_APP_URL"])])
+        self.assertEqual([b.label for b in app.button if b.disabled],
+                         ["Open Inventory", "Open Reconciliation", "Open Equity and contributions"])
+
+    def test_invalid_override_disables_sales_only(self):
+        app = self.run_app(SALES_APP_URL="javascript:alert(1)")
+        self.assertFalse(app.exception)
         self.assertFalse(app.get("link_button"))
-        self.assertTrue(all(b.disabled for b in app.button))
 
     def test_configured_url_enables_only_its_card(self):
         app = self.run_app(SALES_APP_URL="https://sales.example.com/", INVENTORY_APP_URL="javascript:alert(1)")

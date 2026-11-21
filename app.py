@@ -22,8 +22,10 @@ SERVICES = (
             "EQUITY_APP_URL"),
 )
 
-# No Ágata café application is deployed yet. Add confirmed URLs here; never guess them.
-DEFAULT_URLS: dict[str, str] = {}
+# User-confirmed deployments; the matching setting overrides each one. Never guess URLs.
+DEFAULT_URLS: dict[str, str] = {
+    "SALES_APP_URL": "https://agatacafe-sales.streamlit.app/",
+}
 
 
 def main():
