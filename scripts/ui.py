@@ -39,10 +39,10 @@ def app_header():
     with st.container(key="agata_header"):
         text, mark = st.columns([4, 1], vertical_alignment="center")
         with text:
-            st.title("Ágata café: administration")
-            st.write("Choose an application to manage Ágata café. Carrizal, Costa Rica.")
+            st.title("Ágata café: administración")
+            st.write("Elija una aplicación para administrar Ágata café. Carrizal, Costa Rica.")
         with mark:
-            st.html('<img class="agata-logo" alt="Ágata café agate bean" '
+            st.html('<img class="agata-logo" alt="Grano de ágata de Ágata café" '
                     'src="data:image/svg+xml;base64,' + encoded + '">')
 
 
@@ -53,8 +53,8 @@ def service_card(service, url, *, invalid=False):
             st.write(service.description)
         with st.container():
             if url:
-                st.link_button(f"Open {service.title}", url, width="stretch")
+                st.link_button(f"Abrir {service.title}", url, width="stretch")
             else:
-                st.button(f"Open {service.title}", disabled=True, width="stretch", key=service.slug,
-                          help="The configured app link is invalid. Contact the administrator." if invalid else None)
-                st.caption("App link will be available after deployment.")
+                st.button(f"Abrir {service.title}", disabled=True, width="stretch", key=service.slug,
+                          help="El enlace configurado no es válido. Contacte al administrador." if invalid else None)
+                st.caption("El enlace estará disponible cuando la app se publique.")

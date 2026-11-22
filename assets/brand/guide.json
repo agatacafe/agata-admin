@@ -1,87 +1,87 @@
 {
-  "version": "2026-11-21",
+  "version": "2026-11-22",
   "logo": {
-    "description": "A flat vector agate bean drawn from the illustrated packaging bean: an S-shaped crease, rippled agate layers that follow each half of the bean, thin cream veins and a glossy highlight, in roast, amber, honey, sand and cream.",
+    "description": "Un grano de ágata en vector plano, dibujado a partir del grano ilustrado del empaque: una hendidura en arco, capas de ágata onduladas que siguen cada mitad del grano, vetas color crema y un brillo, en tostado, ámbar, miel, arena y crema.",
     "rules": [
-      "Use the full-colour bean by default, on olive, sage, cream or dark backgrounds.",
-      "Use the one-colour olive or cream bean where only one ink is possible, such as stamps, engraving or embroidery.",
-      "Keep the original proportions and the transparent background; do not add a backing shape or recolour the layers.",
-      "Leave clear space around the bean of at least one quarter of its width.",
-      "The painted illustration and the script wordmark remain the packaging artwork; the flat bean is for interfaces, favicons and small sizes.",
-      "Regenerate the SVGs with scripts/make_logo.py instead of editing them by hand."
+      "Use el grano a color por defecto, sobre fondos oliva, salvia, crema u oscuros.",
+      "Use el grano de una tinta (oliva o crema) cuando solo se pueda imprimir un color, como sellos, grabados o bordados.",
+      "Mantenga las proporciones originales y el fondo transparente; no agregue una figura de fondo ni cambie los colores de las capas.",
+      "Deje alrededor del grano un espacio libre de al menos un cuarto de su ancho.",
+      "La ilustración pintada y el logotipo manuscrito siguen siendo el arte del empaque; el grano plano es para pantallas, íconos y tamaños pequeños.",
+      "Regenere los SVG con scripts/make_logo.py en lugar de editarlos a mano."
     ]
   },
   "colors": [
     {
-      "name": "Olive",
+      "name": "Oliva",
       "hex": "#7A7F5E",
-      "use": "Wordmark background and primary brand surface."
+      "use": "Fondo del logotipo y superficie principal de la marca."
     },
     {
-      "name": "Deep olive",
+      "name": "Oliva oscuro",
       "hex": "#6B7050",
-      "use": "Logo and accents on light backgrounds; interface primary color."
+      "use": "Logo y acentos sobre fondos claros; color principal de la interfaz."
     },
     {
-      "name": "Sage",
+      "name": "Salvia",
       "hex": "#CDD3AC",
-      "use": "Product label background."
+      "use": "Fondo de la etiqueta de producto."
     },
     {
-      "name": "Cream",
+      "name": "Crema",
       "hex": "#FAF4EA",
-      "use": "Script wordmark and logo on olive."
+      "use": "Logotipo manuscrito y logo sobre oliva."
     },
     {
-      "name": "Roast",
+      "name": "Tostado",
       "hex": "#7A3E17",
-      "use": "Dark agate layers and the logo outline."
+      "use": "Capas oscuras de ágata y contorno del logo."
     },
     {
-      "name": "Amber",
+      "name": "Ámbar",
       "hex": "#A9601F",
-      "use": "Mid agate layers in the logo."
+      "use": "Capas intermedias de ágata del logo."
     },
     {
-      "name": "Honey",
+      "name": "Miel",
       "hex": "#CF923F",
-      "use": "Main agate tone of the logo."
+      "use": "Tono principal de ágata del logo."
     },
     {
-      "name": "Ink",
+      "name": "Tinta",
       "hex": "#3A1C0A",
-      "use": "Logo crease."
+      "use": "Hendidura del logo."
     },
     {
-      "name": "Sand",
+      "name": "Arena",
       "hex": "#E8C98F",
-      "use": "Light agate layers in the logo."
+      "use": "Capas claras de ágata del logo."
     }
   ],
   "label_fields": [
     [
       "Origen",
-      "Origin, e.g. Carrizal, Costa Rica"
+      "Origen, p. ej. Carrizal, Costa Rica"
     ],
     [
       "Variedad",
-      "Coffee variety"
+      "Variedad de café"
     ],
     [
       "Notas",
-      "Tasting notes"
+      "Notas de cata"
     ],
     [
       "Proceso",
-      "Process, e.g. Natural"
+      "Proceso, p. ej. Natural"
     ],
     [
       "Tueste",
-      "Roast level"
+      "Nivel de tueste"
     ],
     [
       "Empaque",
-      "Package, e.g. 500g en grano"
+      "Presentación, p. ej. 500g en grano"
     ]
   ],
   "contact": [

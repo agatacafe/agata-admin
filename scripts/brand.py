@@ -26,45 +26,45 @@ def _swatch(background, inner):
 
 def brand_guide():
     guide = json.loads((BRAND / "guide.json").read_text(encoding="utf-8"))
-    st.header("Brand guide")
-    st.write("Logo, colors and product label reference for Ágata café.")
-    st.download_button("Download brand kit", brand_kit(), file_name="Agata-cafe-brand-kit.zip",
+    st.header("Guía de marca")
+    st.write("Logo, colores y etiqueta de producto de Ágata café.")
+    st.download_button("Descargar kit de marca", brand_kit(), file_name="Agata-cafe-kit-de-marca.zip",
                        mime="application/zip")
 
     st.subheader("Logo")
     st.write(guide["logo"]["description"])
     for column, filename, background, label in zip(st.columns(3),
             ("agata-bean.svg", "agata-bean-olive.svg", "agata-bean-cream.svg"), ("#7A7F5E", "#FBF7EE", "#7A7F5E"),
-            ("Agate bean · full colour", "One colour · olive", "One colour · cream")):
+            ("Grano de ágata · a color", "Una tinta · oliva", "Una tinta · crema")):
         with column:
             svg = (BRAND / filename).read_text(encoding="utf-8")
             encoded = base64.b64encode(svg.encode()).decode()
             st.html(_swatch(background, f'<img src="data:image/svg+xml;base64,{encoded}" height="110" alt="{label}">'))
             st.caption(label)
-            st.download_button("Download " + filename, svg, file_name=filename, mime="image/svg+xml")
+            st.download_button("Descargar " + filename, svg, file_name=filename, mime="image/svg+xml")
     for rule in guide["logo"]["rules"]:
         st.write("• " + rule)
 
-    st.subheader("Packaging artwork")
+    st.subheader("Arte de empaque")
     for column, filename, caption in zip(st.columns(2), ("wordmark.png", "product-label.png"),
-                                         ("Script wordmark with the illustrated agate bean", "Product label")):
+                                         ("Logotipo manuscrito con el grano de ágata ilustrado", "Etiqueta de producto")):
         with column:
             st.image(str(BRAND / "reference" / filename), caption=caption, width="stretch")
 
-    st.subheader("Colors")
+    st.subheader("Colores")
     for start in range(0, len(guide["colors"]), 3):
         for column, color in zip(st.columns(3), guide["colors"][start:start + 3]):
             with column:
                 hex_value = color["hex"]
                 st.html(f'<div style="height:64px;background:{hex_value};border:1px solid #7A7F5E;'
-                        f'border-radius:8px" aria-label="{color["name"]} color swatch"></div>')
+                        f'border-radius:8px" aria-label="Muestra de color {color["name"]}"></div>')
                 st.write("**" + color["name"] + "**")
                 st.code(hex_value, language=None)
                 st.caption("RGB " + ", ".join(str(int(hex_value[i:i + 2], 16)) for i in (1, 3, 5)))
                 st.write(color["use"])
 
-    st.subheader("Product label fields")
-    st.table({"Field": [f for f, _ in guide["label_fields"]],
-              "Content": [c for _, c in guide["label_fields"]]})
-    st.caption("Contact on packaging: " + " · ".join(guide["contact"]))
-    st.caption("Reference updated: " + guide["version"])
+    st.subheader("Campos de la etiqueta")
+    st.table({"Campo": [f for f, _ in guide["label_fields"]],
+              "Contenido": [c for _, c in guide["label_fields"]]})
+    st.caption("Contacto en el empaque: " + " · ".join(guide["contact"]))
+    st.caption("Referencia actualizada: " + guide["version"])

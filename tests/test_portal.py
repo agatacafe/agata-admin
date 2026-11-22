@@ -23,19 +23,19 @@ class PortalTests(unittest.TestCase):
     def test_starts_without_secrets(self):
         app = self.run_app()
         self.assertFalse(app.exception)
-        self.assertEqual(app.title[0].value, "Ágata café: administration")
+        self.assertEqual(app.title[0].value, "Ágata café: administración")
         self.assertEqual([s.value for s in app.subheader[:4]], [s.title for s in SERVICES])
         # Every card links to its user-confirmed deployment by default.
         self.assertEqual([(l.proto.label, l.proto.url) for l in app.get("link_button")],
-                         [(f"Open {s.title}", DEFAULT_URLS[s.setting]) for s in SERVICES])
+                         [(f"Abrir {s.title}", DEFAULT_URLS[s.setting]) for s in SERVICES])
         self.assertFalse(app.button)
 
     def test_invalid_override_disables_only_its_card(self):
         app = self.run_app(SALES_APP_URL="javascript:alert(1)")
         self.assertFalse(app.exception)
         self.assertEqual([l.proto.label for l in app.get("link_button")],
-                         ["Open Inventory", "Open Reconciliation", "Open Equity and contributions"])
-        self.assertEqual([b.label for b in app.button if b.disabled], ["Open Sales"])
+                         ["Abrir Inventario", "Abrir Conciliación", "Abrir Capital y aportes"])
+        self.assertEqual([b.label for b in app.button if b.disabled], ["Abrir Ventas"])
 
     def test_configured_url_overrides_default(self):
         app = self.run_app(SALES_APP_URL="https://sales.example.com/")

@@ -5,6 +5,9 @@ with a Brand guide tab. It follows the same pattern as Elaenia Technologies'
 administration portal: it reads public URL settings and local brand assets only,
 and needs no credentials, database or business records.
 
+The interface is in Spanish (user-requested 2026-11-22: the users speak only
+Spanish), like every Ágata app; this documentation stays in English.
+
 Deployed at https://agatacafe-admi.streamlit.app/ from `agatacafe/agata-admin`,
 branch `main`, entry point `app.py`. Use this URL for "Back to administration"
 links in Ágata café's other apps.
