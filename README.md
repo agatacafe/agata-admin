@@ -18,12 +18,17 @@ links in Ágata café's other apps.
 | Reconciliation | `agatacafe/agata-reconciliation` | `RECONCILIATION_APP_URL` |
 | Equity and contributions | `agatacafe/agata-equity` | `EQUITY_APP_URL` |
 
-Sales is deployed at https://agatacafe-sales.streamlit.app/ (user-confirmed
-2026-11-21) and is linked by default. The other cards stay disabled with
-"App link will be available after deployment." until their URLs are confirmed
-and added to `DEFAULT_URLS` in `app.py`. A setting in `.streamlit/secrets.toml`
-or an environment variable overrides a default; a blank value uses it. Invalid,
-credential-bearing or non-HTTP(S) URLs keep only that card disabled.
+Each card opens its user-confirmed deployment by default (confirmed 2026-11-21):
+
+- Sales: https://agatacafe-sales.streamlit.app/
+- Inventory: https://agatacafe-inventory.streamlit.app/
+- Reconciliation: https://agatacafe-reconciliation.streamlit.app/
+- Equity and contributions: https://agatacafe-equity.streamlit.app/
+
+The defaults live in `DEFAULT_URLS` in `app.py`. A setting in
+`.streamlit/secrets.toml` or an environment variable overrides one; a blank value
+uses the default. Invalid, credential-bearing or non-HTTP(S) URLs keep only that
+card disabled.
 
 ## Logo
 

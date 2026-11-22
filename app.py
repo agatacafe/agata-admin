@@ -25,6 +25,9 @@ SERVICES = (
 # User-confirmed deployments; the matching setting overrides each one. Never guess URLs.
 DEFAULT_URLS: dict[str, str] = {
     "SALES_APP_URL": "https://agatacafe-sales.streamlit.app/",
+    "INVENTORY_APP_URL": "https://agatacafe-inventory.streamlit.app/",
+    "RECONCILIATION_APP_URL": "https://agatacafe-reconciliation.streamlit.app/",
+    "EQUITY_APP_URL": "https://agatacafe-equity.streamlit.app/",
 }
 
 
